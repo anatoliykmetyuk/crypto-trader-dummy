@@ -17,9 +17,15 @@ object Main {
       Ok("We are the most convenient cryptocurrency trader on the web")
     }
 
+  val stuff =
+    get("stuff") {
+      Ok("This is stuff")
+    }
+
   val api =
     greetingMessage :+:
-    aboutUsMessage
+    aboutUsMessage :+:
+    stuff
 
   def main(args: Array[String]): Unit = {
     val port = 8081
